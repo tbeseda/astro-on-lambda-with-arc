@@ -1,5 +1,6 @@
 ---
-
+const cookie = Astro.request.headers.get('cookie');
+console.log(cookie);
 ---
 <html lang="en">
 	<head>
@@ -9,5 +10,6 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<pre>{cookie}</pre>
 	</body>
 </html>
