@@ -1,15 +1,15 @@
 ---
 const cookie = Astro.request.headers.get('cookie');
-console.log(cookie);
+console.log('Astro.request: ', Astro.request);
 ---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
+		<title>Astro on Arc</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Astro on Arc</h1>
 		<pre>{cookie}</pre>
 	</body>
 </html>
