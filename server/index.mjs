@@ -31,9 +31,12 @@ async function server (request, response) {
 // export const handler = arc.http.async(server);
 
 export async function handler(req, res) {
+  // heh, this isn't going to work
+  // but the idea is correct, convert API Gateway request to node request
   const incomingMessage = new IncomingMessage(req);
   const serverResponse = new ServerResponse(res);
 
+  // Astro does receive the request, but it's not interop
   ssrHandler(incomingMessage, serverResponse, err => {
     if(err) {
       res.writeHead(500);
@@ -43,13 +46,4 @@ export async function handler(req, res) {
       res.end();
     }
   });
-
-  // return {
-  //   statusCode: 200,
-  //   headers: {
-  //     'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
-  //     'content-type': 'text/html; charset=utf8'
-  //   },
-  //   body: `hi`
-  // }
 }
