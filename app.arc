@@ -3,5 +3,6 @@ arc-astro
 
 @http
 /*
-  method get
-  src ./server/
+  method any
+  src ./server
+

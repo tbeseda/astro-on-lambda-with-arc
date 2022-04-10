@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import nodejs from '@astrojs/node';
+import awsAdapter from './aws-adapter/dist/index.js';
 
-// https://astro.build/config
 export default defineConfig({
-  adapter: nodejs(),
+  adapter: awsAdapter(),
+  outDir: './server/dist',
 });
