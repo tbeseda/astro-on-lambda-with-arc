@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "serialize-javascript": "6.0.0",
-    "shorthash": "0.0.2"
-  }
-}
