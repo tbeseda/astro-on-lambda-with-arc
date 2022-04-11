@@ -1,14 +1,14 @@
 ---
-const cookie = Astro.request.headers.get('cookie');
+const RANDOM = Math.floor(Math.random() * 100) + 1;
 ---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Astro on Arc</title>
+		<title>Astro on Lambda</title>
 	</head>
 	<body>
-		<h1>Astro on Arc</h1>
-		<pre>{cookie}</pre>
+		<h1>Astro on Lambda</h1>
+		<p>Random: <code>{RANDOM}</code></p>
 	</body>
 </html>

@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import awsAdapter from './aws-adapter/dist/index.js';
+import awsAdapter from 'astro-lambda-adapter';
 
 export default defineConfig({
   adapter: awsAdapter(),
